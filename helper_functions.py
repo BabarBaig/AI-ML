@@ -45,8 +45,9 @@ def read_csv_dict(csv_file_path):
 
 
 def print_llm_response(prompt):
-    """This function takes as input a prompt, which must be a string enclosed in quotation marks,
-    and passes it to OpenAI's GPT3.5 model. The function then prints the response of the model.
+    """This function takes as input a prompt, which must be a string enclosed
+    in quotation marks, and passes it to OpenAI's GPT3.5 model. The function 
+    then prints the response of the model.
     """
     try:
         if not isinstance(prompt, str):
@@ -69,9 +70,9 @@ def print_llm_response(prompt):
 
 
 def get_llm_response(prompt):
-    """This function takes as input a prompt, which must be a string enclosed in quotation marks,
-    and passes it to OpenAI's GPT3.5 model. The function then saves the response of the model as
-    a string.
+    """This function takes as input a prompt, which must be a string enclosed 
+    in quotation marks, and passes it to OpenAI's GPT3.5 model. The function 
+    then saves the response of the model as a string.
     """
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -93,7 +94,7 @@ def upload_txt_file():
     Uploads a text file and saves it to the specified directory.
     
     Args:
-        directory (str): The directory where the uploaded file will be saved. 
+        directory (str): The directory where the uploaded file will be saved.
         Defaults to the current working directory.
     """
     # Create the file upload widget
@@ -134,7 +135,8 @@ def list_files_in_directory(directory='.'):
     Lists all non-hidden files in the specified directory.
     
     Args:
-        directory (str): The directory to list files from. Defaults to the current working directory.
+        directory (str): The directory to list files from. Defaults to the
+        current working directory.
     """
     try:
         files = [f for f in os.listdir(directory) if (not f.startswith('.') and not f.startswith('_'))]
