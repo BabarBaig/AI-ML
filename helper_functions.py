@@ -110,11 +110,12 @@ def upload_txt_file():
             output.clear_output()
             # Read the file content
             content = upload_widget.value[0]['content']
-            name = upload_widget.value[0]['name']
+            name    = upload_widget.value[0]['name']
             size_in_kb = len(content) / 1024
             
             if size_in_kb > 3:
-                print(f"Your file is too large, please upload a file that doesn't exceed 3KB.")
+                print(f"Your file is too large, please upload a file \
+                      that doesn't exceed 3KB.")
                 return
 		    
             # Save the file to the specified directory
